@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login - Spotifyclone</title>
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <img src="Screenshot_2024-11-01_212053-removebg-preview.png" alt="Spotify" class="logo">
+            <h1>Log in to Spotify</h1>
+
+            <!-- Social Login Buttons -->
+            <button class="social-btn google">
+                <span class="icon"><img src="Screenshot_2024-11-01_212550-removebg-preview.png" style="height:20px"></span> Continue with Google
+            </button>
+            <button class="social-btn facebook">
+                <span class="icon"><img src="Screenshot_2024-11-01_212911-removebg-preview.png" style="height:20px"></span> Continue with Facebook
+            </button>
+            <button class="social-btn apple">
+                <span class="icon"><img src="Screenshot_2024-11-01_213040-removebg-preview.png" style="height:20px"></span> Continue with Apple
+            </button>
+
+            <!-- Divider -->
+            <div class="divider"><hr>or<hr></div>
+
+            <!-- Login Form -->
+            <form>
+                <div class="textbox">
+                    <label for="email">Email or username</label>
+                    <input type="text" id="email" placeholder="Email or username" required>
+                </div>
+                <div class="textbox">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <div class="remember-me">
+                    <input type="checkbox" id="remember">
+                    <label for="remember">Remember me</label>
+                </div>
+                <button type="submit" class="btn" onclick="show()">Log In</button>
+                <div class="links">
+                    <a href="#">Forgot your password?</a>
+                </div>
+                <div class="signup-link">
+                    <p>Don't have an account? <a href="#">Sign up for Spotify</a></p>
+                </div>
+            </form>
+            <script>
+                function show() {
+                    const email = document.getElementById('email').value;
+                    const password = document.getElementById('password').value;
+                    
+                    if (email == "" || password == "") {
+                        alert('Please fill in both fields');
+                        return false;
+                    }
+
+                    alert('Login successful');
+                    
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>
